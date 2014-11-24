@@ -10,6 +10,17 @@ The user can select a person from the list described above. When the user select
 The web page should allow the user to add a new person. The user should be able to enter data for the FirstName, MiddleName, LastName, BirthDate, and EmailAddress fields. It should validate that the e-mail address entered is a valid e-mail address. LastName and BirthDate are both required fields. BirthDate must also be a valid date.
 
 What I did:
+
 1) I used yeoman to create the boilerplate to start from for a new MEANJS application:
 
 $ yo meanjs
+
+2) I used the MEANJS yeoman sub-generator to create a CRUD module for "person", it automatically creates menu items to list and create new people.
+
+$ yo meanjs:crud-module person
+
+3) The supplied menu-items were nice, give the ability to seed the db before we add our own UI per the assessment design.
+	- add listbox bound to the person table.
+	- bind click event to show details of currently selected person beside tables.
+	- create "Add" button to allow addition of another user - this will show a form with a submit button, after which
+		the list will be updated to show the newly added person.
